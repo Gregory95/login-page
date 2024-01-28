@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --color-primary: #3ab19b;
+    --color-background: rgb(231, 230, 230);
+    --color-border-gray: rgb(188, 188, 188);
+    --color-border-light-gray: rgb(247, 247, 247);
+
+    --color-icon: #656565;
+    --color-white: #FFF;
+
+    --padding-sm: 0.5rem;
+    --padding-md: 1rem;
+    --padding-lg: 2rem;
+    --padding-xl: 5rem;
+
+    --margin-sm: 0.5rem;
+    --margin-md: 1rem;
+    --margin-lg: 2rem;
+    --margin-xl: 5rem;
+
+    --font-small: 12px;
+    --font-medium: 18px;
+    --font-large: 22px;
+    --font-xlarge: 28px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Poppins",
+        sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: var(--color-background);
+}
+
+body {
+    display: flex;
+}
+
+a {
+    caret-color: transparent;
+}
+
+.main {
+    position: relative;
+    margin: auto;
+}
+
+.credentials-panel {
+    display: flex;
+    height: 650px;
+    width: 1150px;
+    border-radius: 10px;
+    background: var(--color-white);
+}
+
+.credentials-panel .welcome {
+    background: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    max-width: 33%;
+    border-radius: 10px 5px 5px 10px;
+    padding: var(--padding-md);
+    transition: transform 0.5s ease-in-out;
+}
+
+.credentials-panel .welcome-title {
+    font-size: var(--font-large);
+    margin-bottom: var(--margin-lg);
+}
+
+.credentials-panel .welcome-message {
+    font-size: var(--font-medium);
+    font-weight: 200;
+    margin-bottom: var(--margin-lg);
+}
+
+.credentials-form {
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.credentials-form .title {
+    font-size: var(--font-xlarge);
+    color: var(--color-primary);
+    text-align: center;
+}
+
+#registerPanel,
+#welcomeLoginPanel {
+    display: none;
+}
+
+.welcome-button {
+    margin-top: 5rem;
+    padding: 1rem 2.75rem;
+}
+
+.welcome-button a {
+    background-color: inherit;
+    padding: inherit;
+    border: 1px solid var(--color-white);
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+
+.welcome-button:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.social-login a {
+    padding: 1.1rem 1.5rem;
+    margin: 1rem;
+    border-radius: 50%;
+    font-size: larger;
+    border: 1px solid var(--color-border-gray);
+    color: black;
+}
+
+.social-login a:hover>i {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.login-alternative,
+.register-alternative {
+    text-align: center;
+    font-size: small;
+    margin: 0.5rem 0;
+    color: var(--color-icon)
+}
+
+.sa-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+}
+
+.sa-input i {
+    position: absolute;
+    text-align: center;
+    margin: 0 0.5rem;
+    color: var(--color-icon);
+}
+
+.sa-input input {
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 350px;
+    height: 45px;
+    background: var(--color-border-light-gray);
+}
+
+.sa-input input:focus {
+    border: 1px solid var(--color-primary);
+    background: var(--color-white);
+}
+
+.error {
+    color: red;
+    margin-top: 0.25rem;
+}
+
+.forgot-password {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.forgot-password a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    background: var(--color-white);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--color-border-gray);
+}
+
+.forgot-password a:hover {
+    cursor: pointer;
+    background: var(--color-border-light-gray);
+    transition: 0.2s;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+}
+
+.button-group button {
+    background: var(--color-primary);
+    border: none;
+    padding: 0.75rem 3.5rem;
+    border-radius: 5px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+.button-group button:hover {
+    opacity: 0.9;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* HELPER CLASSES - Add on Runtime to create animations */
+
+/* RESPONSIVE view */
+
+@media only screen and (max-width: 600px) {
+    * {
+        overflow: hidden;
+    }
+
+    .credentials-panel {
+        height: auto;
+        width: auto;
+        flex-direction: column;
+    }
+
+    .credentials-panel .welcome {
+        max-width: unset;
+        width: 100%;
+        border-radius: 5px 5px 10px 10px;
+    }
+
+    .welcome-button {
+        position: relative;
+        padding: 0.5rem 1.75rem;
+    }
+
+    .social-login a {
+        padding: 1rem 1.25rem;
+        margin: 0.5rem;
+        font-size: large;
+    }
+
+    .sa-input input {
+        width: auto;
+    }
+
+    .button-group {
+        margin-top: 2.5rem;
+    }
+
+    .button-group button {
+        padding: 0.75rem 2.5rem;
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+}

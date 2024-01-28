@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GregoCode</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="credentials-panel">
+            <div class="welcome">
+                <div id="welcomeRegisterPanel">
+                    <div class="welcome-title">
+                        <h2>Hey, Welcome to GregoCode</h2>
+                    </div>
+                    <div class="welcome-message">
+                        Create your acount to start your journey with us!
+                    </div>
+                    <div class="welcome-button">
+                        <a type="button" name="signup" onclick="handleFormsTransition('register')">Sign up</a>
+                    </div>
+                </div>
+                <div id="welcomeLoginPanel">
+                    <div class="welcome-title">
+                        <h2>Welcome Back!</h2>
+                    </div>
+                    <div class="welcome-message">
+                        To keep connected with us please login with your personal info.
+                    </div>
+                    <div class="welcome-button">
+                        <a type="button" name="signin" onclick="handleFormsTransition('login')">Sign in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="credentials-form">
+                <div id="registerPanel">
+                    <div class="title">
+                        <h2>Create an Account</h2>
+                    </div>
+                    <div class="social-login">
+                        <a href="#"><i class="fa-brands fa-google"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-x"></i></a>
+                    </div>
+
+                    <div class="register-alternative">
+                        <p>or use email for registration</p>
+                    </div>
+
+                    <form #form class="form">
+                        <div class="sa-input">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="username" placeholder="Username" />
+                            <!-- <small class="error">Username is required</small> -->
+                        </div>
+                        <div class="sa-input">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="password" placeholder="Password" />
+                            <!-- <small class="error">Password is required</small> -->
+                        </div>
+
+                        <div class="sa-input">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="confirmPassword" placeholder="Confirm Password" />
+                            <!-- <small class="error">Password is required</small> -->
+                        </div>
+                        <!-- <small class="error">Username and password combination is wrong</small> -->
+                    </form>
+
+                    <div class="forgot-password">
+                        <a href="#">You already have an account?</a>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" name="submit">Sign up</button>
+                    </div>
+                </div>
+                <div id="loginPanel">
+                    <div class="title">
+                        <h2>Login</h2>
+                    </div>
+                    <div class="social-login">
+                        <a href="#"><i class="fa-brands fa-google"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-x"></i></a>
+                    </div>
+
+                    <div class="login-alternative">
+                        <p>or use your account</p>
+                    </div>
+
+                    <form #form class="form">
+                        <div class="sa-input">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="username" placeholder="Username" />
+                            <!-- <small class="error">Username is required</small> -->
+                        </div>
+                        <div class="sa-input">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="password" placeholder="Password" />
+                            <!-- <small class="error">Password is required</small> -->
+                        </div>
+
+                        <!-- <small class="error">Username and password combination is wrong</small> -->
+                    </form>
+
+                    <div class="forgot-password">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" name="submit">Sign in</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
